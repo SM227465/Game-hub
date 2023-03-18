@@ -2,7 +2,7 @@ import { useColorMode } from '@chakra-ui/color-mode';
 import { HStack, Text } from '@chakra-ui/layout';
 import { Switch } from '@chakra-ui/switch';
 
-function ColorModeSwitch() {
+const ColorModeSwitch = () => {
   const { toggleColorMode, colorMode } = useColorMode();
 
   return (
@@ -11,6 +11,6 @@ function ColorModeSwitch() {
       <Text>Dark Mode</Text>
     </HStack>
   );
-}
+};
 
 export default ColorModeSwitch;
