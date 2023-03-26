@@ -6,6 +6,7 @@ import { Game } from '../hooks/useGames';
 import getCroppedImageUrl from '../services/image-url';
 import CriticScore from './CriticScore';
 import PlatformIconList from './PlatformIconList';
+import Rating from './Rating';
 
 interface Props {
   game: Game;
@@ -23,6 +24,9 @@ const GameCard = (props: Props) => {
           <CriticScore score={game.metacritic} />
         </HStack>
         <Heading fontSize='2xl'>{game.name}</Heading>
+        {/* <HStack> */}
+        <Rating rating={game.rating} />
+        {/* </HStack> */}
       </CardBody>
     </Card>
   );
