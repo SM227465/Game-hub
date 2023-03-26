@@ -1,10 +1,8 @@
 import { HStack } from '@chakra-ui/react';
-import React from 'react';
 import { BsStarFill, BsStarHalf, BsStar } from 'react-icons/bs';
 
 interface Props {
   rating: number;
-  //   rating_top: number;
 }
 
 const Rating = (props: Props) => {
