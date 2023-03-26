@@ -1,11 +1,11 @@
 import { Card, CardBody } from '@chakra-ui/card';
 import { Image } from '@chakra-ui/image';
 import { Heading, HStack, Text } from '@chakra-ui/layout';
-import React from 'react';
 import { Game } from '../hooks/useGames';
 import getCroppedImageUrl from '../services/image-url';
 import CriticScore from './CriticScore';
 import PlatformIconList from './PlatformIconList';
+import Rating from './Rating';
 
 interface Props {
   game: Game;
@@ -23,6 +23,7 @@ const GameCard = (props: Props) => {
           <CriticScore score={game.metacritic} />
         </HStack>
         <Heading fontSize='2xl'>{game.name}</Heading>
+        <Rating rating={game.rating} />
       </CardBody>
     </Card>
   );
