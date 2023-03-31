@@ -9,12 +9,18 @@ const Pagination = (props: Props) => {
   const { onSelectPage } = props;
   const [selectedPage, setSelectedPage] = useState(1);
 
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+
   const nextPageHandler = () => {
+    scrollToTop();
     onSelectPage(selectedPage + 1);
     setSelectedPage(selectedPage + 1);
   };
 
   const prevPageHandler = () => {
+    scrollToTop();
     onSelectPage(selectedPage - 1);
     setSelectedPage(selectedPage - 1);
   };
