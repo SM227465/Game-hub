@@ -56,7 +56,6 @@ function App() {
           </Flex>
         </Box>
         <GameGrid gameQuery={gameQuery} />
-        <Pagination onSelectPage={(page) => setGameQuery({ ...gameQuery, page })} />
       </GridItem>
     </Grid>
   );
